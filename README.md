@@ -22,7 +22,7 @@ allprojects {
 	}
   ```
 
-# In MOdule level build file
+# In Moule level build file
   
   
   
@@ -32,3 +32,27 @@ allprojects {
 	        implementation 'com.github.r00786:CircleImageCrop:Tag'
 	}
   ```
+  
+  # How to Use
+  
+  //implement the CircleCropActivity.CroppedImageCallbacks in your activity
+  public class MainActivity extends AppCompatActivity implements CircleCropActivity.CroppedImageCallbacks{
+
+private CircleImageView ivCrop;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ivCrop=findViewById(R.id.iv_crop);
+	// Use this codde to open Circle Crop first parameter is context second is bitmap to be cropped and third is whether you want           //grid lines or not
+        CircleCropActivity.openCircleCropActivityWithBitmap(this, BitmapFactory.decodeResource(getResources(),R.drawable.photo),true);
+    }
+
+
+     //After saving your bitmap you will receive the bitmap in this method
+    @Override
+    public void setCroppedImage(Bitmap bitmap) {
+            ivCrop.setImageBitmap(bitmap);
+
+    }
+}
