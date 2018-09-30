@@ -6,7 +6,6 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
-
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -61,6 +60,7 @@ public class CircleOverlayView extends View {
         super.onDraw(canvas);
         this.paint.setColor(getResources().getColor(this.highlightMode ? R.color.ad_black_70 : R.color.ad_black_solid));
         this.paint.setStyle(Style.FILL);
+        this.paint.setAntiAlias(true);
 
         canvas.drawPaint(this.paint);
         int left = getPaddingLeft();
