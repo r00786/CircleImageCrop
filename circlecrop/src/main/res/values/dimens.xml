@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_16">16dp</dimen>
+    <dimen name="fon_18">18sp</dimen>
+    <dimen name="size_20">20dp</dimen>
+    <dimen name="ad_item_spacing_6">34dp</dimen>
+</resources>

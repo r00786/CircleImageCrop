@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ad_white_solid">#ffffff</color>
+    <color name="ad_white_55">#b2ffffff</color>
+    <color name="ad_black_70">#bf000000</color>
+    <color name="ad_black_solid">#ff000000</color>
+    <color name="ad_blue_6">#ff0084bf</color>
+    <color name="ad_blue_7">#ff0073b1</color>
+    <color name="ad_blue_8">#ff006097</color>
+    <color name="ad_blue_9">#ff004b7c</color>
+</resources>
