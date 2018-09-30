@@ -34,7 +34,7 @@ allprojects {
   ```
   
   # How to Use
-  
+  ```groovy
   //implement the CircleCropActivity.CroppedImageCallbacks in your activity
   public class MainActivity extends AppCompatActivity implements CircleCropActivity.CroppedImageCallbacks{
 
@@ -56,3 +56,5 @@ private CircleImageView ivCrop;
 
     }
 }
+
+```
