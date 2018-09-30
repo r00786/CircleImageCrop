@@ -9,17 +9,18 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import circlecrop.rohit.image.CircleCropActivity;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements CircleCropActivity.CroppedImageCallbacks{
 
     private int reequestCode=101;
-private ImageView ivCrop;
+private CircleImageView ivCrop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ivCrop=findViewById(R.id.iv_crop);
-        CircleCropActivity.openCircleCropActivityWithBitmap(this, BitmapFactory.decodeResource(getResources(),R.drawable.photo),reequestCode,true);
+        CircleCropActivity.openCircleCropActivityWithBitmap(this, BitmapFactory.decodeResource(getResources(),R.drawable.photo),true);
     }
 
 

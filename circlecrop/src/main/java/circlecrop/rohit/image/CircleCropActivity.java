@@ -84,23 +84,22 @@ public class CircleCropActivity extends AppCompatActivity {
      * if the file is too large to be loaded into memory
      *
      * @param pathOfFileToBeCropped
-     * @param requestCode
      */
-    public static void openCircleCropActivityWithFilePath(Activity context, String pathOfFileToBeCropped, int requestCode,
+    public static void openCircleCropActivityWithFilePath(Activity context, String pathOfFileToBeCropped,
                                                           boolean showGrid) {
         if (checkForPermission(context)) {
             croppedImageCallbacks = (CroppedImageCallbacks) context;
             Intent intent = new Intent(context, CircleCropActivity.class);
             intent.putExtra(LIConstants.IMAGE_PATH, pathOfFileToBeCropped);
-            intent.putExtra(LIConstants.IS_BITMAP, requestCode);
+
             intent.putExtra(LIConstants.SHOW_GRID, showGrid);
-            context.startActivityForResult(intent, requestCode);
+            context.startActivity(intent);
         } else {
             Toast.makeText(context, "app doesnt have read write permissions", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public static void openCircleCropActivityWithBitmap(Activity context, Bitmap bitmap, int requestCode,
+    public static void openCircleCropActivityWithBitmap(Activity context, Bitmap bitmap,
                                                         boolean showGrid) {
         if (checkForPermission(context)) {
             saveImage(bitmap, context);
@@ -108,8 +107,8 @@ public class CircleCropActivity extends AppCompatActivity {
             Intent intent = new Intent(context, CircleCropActivity.class);
             intent.putExtra(LIConstants.IMAGE_PATH, filePath);
             intent.putExtra(LIConstants.SHOW_GRID, showGrid);
-            intent.putExtra(LIConstants.IS_BITMAP, requestCode);
-            context.startActivityForResult(intent, requestCode);
+
+            context.startActivity(intent);
 
         } else {
             Toast.makeText(context, "app doesnt have read write permissions", Toast.LENGTH_SHORT).show();
