@@ -28,7 +28,7 @@ allprojects {
 	}
   ```
 
-# In Moule level build file
+# In Module level build file
   
   
   
