@@ -52,7 +52,7 @@ private CircleImageView ivCrop;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ivCrop=findViewById(R.id.iv_crop);
-	// Use this codde to open Circle Crop first parameter is context second is bitmap to be cropped and third is whether you want           //grid lines or not
+	// Use this code to open Circle Crop first parameter is context second is bitmap to be cropped and third is whether you want           //grid lines or not
         CircleCropActivity.openCircleCropActivityWithBitmap(this, BitmapFactory.decodeResource(getResources(),R.drawable.photo),true);
     }
 
