@@ -36,7 +36,7 @@ allprojects {
   ```groovy
 	dependencies {
 	        implementation ('com.github.r00786:CircleImageCrop:v1.0'){
-        exclude group: 'com.android.support'
+                                exclude group: 'com.android.support'
                 }
 	}
   ```
